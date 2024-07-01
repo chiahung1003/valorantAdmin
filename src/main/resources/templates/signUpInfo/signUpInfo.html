@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org" layout:decorate="~{common/layout}" lang="zh-TW">
+
+<body>
+
+<div layout:fragment="content">
+    <!-- Page Heading -->
+    <h1 class="h3 mb-4 text-gray-800">報名記錄下載</h1>
+
+    <form id="initForm" th:action="@{/signUpInfo/recordExport}" method="get">
+        <div class="text-left">
+            <button id="submitBtn" type="submit" class="btn btn-primary">匯出</button>
+        </div>
+    </form>
+
+    <script th:inline="javascript">
+    </script>
+</div>
+</body>
+
+</html>

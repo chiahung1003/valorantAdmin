@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh-TW">
+
+<body>
+<th:block th:fragment="menu">
+	<!-- Sidebar -->
+	<ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+
+		<!-- Sidebar - Brand -->
+		<a class="sidebar-brand d-flex align-items-center justify-content-center" th:href="@{/index}">
+			<div class="sidebar-brand-icon rotate-n-15">
+				<i class="fas fa-laugh-wink"></i>
+			</div>
+			<div class="sidebar-brand-text mx-3">特戰英豪三週年活動管理後台</div>
+		</a>
+
+		<!-- Divider -->
+		<hr class="sidebar-divider my-0">
+
+		<!-- Heading -->
+		<div class="sidebar-heading">
+			Menu
+		</div>
+
+		<!-- Nav Item - Pages Collapse Menu -->
+		<li class="nav-item" >
+			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#userPages"
+			   aria-expanded="true" aria-controls="collapsePages">
+				<i class="fas fa-fw fa-folder"></i>
+				<span>功能維護</span>
+			</a>
+			<div id="userPages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+				<div class="bg-white py-2 collapse-inner rounded">
+					<a class="collapse-item" th:href="@{/registerProgress/init}">拆除進度查詢/修改</a>
+					<a class="collapse-item" th:href="@{/signUpInfo/init}">報名記錄下載</a>
+				</div>
+			</div>
+
+		</li>
+
+
+		<!-- Divider -->
+		<hr class="sidebar-divider d-none d-md-block">
+
+		<!-- Sidebar Toggler (Sidebar) -->
+		<div class="text-center d-none d-md-inline">
+			<button class="rounded-circle border-0" id="sidebarToggle"></button>
+		</div>
+
+	</ul>
+	<!-- End of Sidebar -->
+
+
+</th:block>
+</body>
